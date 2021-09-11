@@ -1,29 +1,29 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: devops-paradox-staging
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  project: staging
-  source:
-    path: helm
-    repoURL: git@github.com:aman-madhas/argocd-staging.git
-    targetRevision: HEAD
-    helm:
-      values: |
-        image:
-          tag: latest
-        ingress:
-          host: staging.devopsparadox.com
-      version: v3
-  destination:
-    namespace: staging
-    server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: devops-paradox-staging
+#   namespace: argocd
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   project: staging
+#   source:
+#     path: helm
+#     repoURL: git@github.com:aman-madhas/argocd-staging.git
+#     targetRevision: HEAD
+#     helm:
+#       values: |
+#         image:
+#           tag: latest
+#         ingress:
+#           host: staging.devopsparadox.com
+#       version: v3
+#   destination:
+#     namespace: staging
+#     server: https://kubernetes.default.svc
+#   syncPolicy:
+#     automated:
+#       selfHeal: true
+#       prune: true
+#     syncOptions:
+#       - CreateNamespace=true
