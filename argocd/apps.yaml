@@ -55,7 +55,7 @@ metadata:
 spec:
   project: staging
   source:
-    repoURL: https://github.com/aman-madhas/argocd-staging.git
+    repoURL: git@github.com:aman-madhas/argocd-staging.git
     targetRevision: HEAD
     path: helm
   destination:

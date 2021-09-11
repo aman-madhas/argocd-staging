@@ -9,7 +9,7 @@ spec:
   project: staging
   source:
     path: helm
-    repoURL: https://github.com/aman-madhas/devops-paradox.git
+    repoURL: git@github.com:aman-madhas/argocd-staging.git
     targetRevision: HEAD
     helm:
       values: |
