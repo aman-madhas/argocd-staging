@@ -9,7 +9,7 @@ spec:
   - type: git
     provider: github
     name: main
-    repo: vfarcic/argocd-staging
+    repo: aman-madhas/argocd-staging
     events:
     - push
     branchRegex: /master/gi
